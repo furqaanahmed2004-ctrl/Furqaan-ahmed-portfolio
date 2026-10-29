@@ -1,3 +1,5 @@
+import glob
+import os
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -10,7 +12,14 @@ header, footer {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 
-html = open("index.html", encoding="utf-8").read()
+base = os.path.dirname(os.path.abspath(__file__))
+files = sorted(glob.glob(os.path.join(base, "**", "*.html"), recursive=True))
+
+if not files:
+    st.error("No .html file found in the repo. Upload your portfolio file to GitHub.")
+    st.stop()
+
+html = open(files[0], encoding="utf-8").read()
 
 resize = """
 <script>
