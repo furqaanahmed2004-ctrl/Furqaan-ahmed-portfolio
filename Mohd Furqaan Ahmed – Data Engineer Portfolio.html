@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohd Furqaan Ahmed – Data Engineer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#eef2f4;--surface:#fff;--ink:#14262e;--mute:#546a74;--line:#cfdbe0;--accent:#1f6f8b;--bronze:#a8663a;--silver:#6f8591;--gold:#b98410;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10191e;--surface:#182329;--ink:#e6eef1;--mute:#93a8b1;--line:#2a3a42;--accent:#5fb4d1;--bronze:#d08a5c;--silver:#9db3bf;--gold:#e0ac3a}}
+:root[data-theme="dark"]{--bg:#10191e;--surface:#182329;--ink:#e6eef1;--mute:#93a8b1;--line:#2a3a42;--accent:#5fb4d1;--bronze:#d08a5c;--silver:#9db3bf;--gold:#e0ac3a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+nav{display:flex;gap:22px;justify-content:flex-end;padding:20px 0;font-weight:500;flex-wrap:wrap}
+nav a{color:var(--mute);text-decoration:none}nav a:hover{color:var(--ink)}
+.hero{padding:48px 0 72px}
+.hero h1{font-size:clamp(2.8rem,9vw,6rem);font-weight:800;letter-spacing:-.03em}
+.hero .role{font-size:clamp(1.2rem,3vw,1.6rem);color:var(--mute);margin:18px 0 0;max-width:34ch}
+.pipe{display:flex;align-items:center;gap:0;margin:44px 0 0;max-width:640px}
+.node{flex:1;border:2px solid;border-radius:10px;padding:12px 14px;background:var(--surface);font-weight:600}
+.node small{display:block;font-weight:400;color:var(--mute);font-size:.82rem}
+.node.b{border-color:var(--bronze)}.node.s{border-color:var(--silver)}.node.g{border-color:var(--gold)}
+.link{flex:0 0 28px;height:2px;background:var(--line);position:relative;overflow:hidden}
+.link::after{content:"";position:absolute;inset:0;width:10px;background:var(--accent);animation:flow 1.6s ease-out 1 .4s both}
+@keyframes flow{from{transform:translateX(-12px)}to{transform:translateX(30px)}}
+.cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.p{background:var(--ink);color:var(--bg)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:24px}
+.about{max-width:62ch}.about p{margin:0 0 14px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px}
+.skills h3{font-size:1.05rem;margin-bottom:8px}
+.skills p{margin:0;color:var(--mute);font-size:.95rem}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{font:600 1rem "Instrument Sans",sans-serif;padding:10px 16px;border-radius:8px;border:2px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{color:#fff;border-color:transparent}
+.tab[data-c="b"][aria-selected="true"]{background:var(--bronze)}
+.tab[data-c="s"][aria-selected="true"]{background:var(--silver)}
+.tab[data-c="g"][aria-selected="true"]{background:var(--gold)}
+.panel{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:10px;padding:26px}
+.panel[data-c="b"]{border-left-color:var(--bronze)}.panel[data-c="s"]{border-left-color:var(--silver)}.panel[data-c="g"]{border-left-color:var(--gold)}
+.panel[hidden]{display:none}
+.panel h3{font-size:1.5rem}
+.meta{color:var(--mute);margin:6px 0 16px}
+.panel ul{padding-left:20px;margin:0 0 18px}.panel li{margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.chips li{margin:0;padding:3px 11px;border:1px solid var(--line);border-radius:99px;font-size:.88rem;color:var(--mute)}
+.edu{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.edu p{margin:4px 0 0;color:var(--mute)}
+footer{padding:48px 0 64px;border-top:1px solid var(--line)}
+footer h2{margin-bottom:12px}
+footer p{margin:6px 0}
+@media (max-width:560px){.pipe{flex-direction:column;align-items:stretch}.link{width:2px;height:20px;flex:none;align-self:center}.link::after{display:none}}
+@media (prefers-reduced-motion:reduce){.link::after{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+
+<header class="hero">
+<h1>Mohd Furqaan Ahmed</h1>
+<p class="role">Data engineer building cloud pipelines that turn raw files into analytics-ready tables.</p>
+<div class="pipe" aria-label="Pipeline: raw, cleaned, curated">
+<div class="node b">Raw<small>files land in storage</small></div><div class="link"></div>
+<div class="node s">Cleaned<small>checked and standardized</small></div><div class="link"></div>
+<div class="node g">Curated<small>ready for reporting</small></div>
+</div>
+<div class="cta"><a class="btn p" href="#projects">See projects</a><a class="btn" href="mailto:Furqaanahmed66@gmail.com">Email me</a></div>
+</header>
+
+<section id="about"><h2>About</h2>
+<div class="about">
+<p>I’m a Computer Science graduate based in Bengaluru, focused on data engineering. I work in SQL, Python and PySpark, and I build batch ETL and ELT pipelines on AWS, Azure, Databricks, Snowflake and dbt.</p>
+<p>My projects follow banking, insurance and e-commerce data scenarios. Each one covers ingestion, transformation, validation and data modeling, so the final tables are ready for analytics.</p>
+<p>I work in Git, follow Agile and Scrum practices, and document my workflows. I also completed a 90-day Salesforce internship covering administration, Apex, Lightning Web Components and automation.</p>
+</div></section>
+
+<section id="skills"><h2>Skills</h2>
+<div class="skills">
+<div><h3>Cloud and platforms</h3><p>AWS (S3, Glue, IAM, EC2, Redshift), Azure (Data Factory, Data Lake Storage, Azure Databricks), Databricks</p></div>
+<div><h3>Big data</h3><p>Apache Spark, PySpark, Spark SQL, Delta Lake, Databricks notebooks</p></div>
+<div><h3>Warehouses and databases</h3><p>Snowflake, Redshift, PostgreSQL, MySQL</p></div>
+<div><h3>Transformation</h3><p>dbt: models, macros, tests, seeds, incremental models. SQL and Jinja</p></div>
+<div><h3>Languages</h3><p>SQL, Python, PySpark</p></div>
+<div><h3>Orchestration and tooling</h3><p>Apache Airflow, Git, GitHub, Jupyter, VS Code, PyCharm, Jira</p></div>
+<div><h3>Data engineering concepts</h3><p>ETL and ELT, dimensional modeling, incremental loads, partitioning, data quality, window functions, performance tuning</p></div>
+</div></section>
+
+<section id="projects"><h2>Projects</h2>
+<p style="color:var(--mute);margin:-8px 0 20px">Self-driven projects. Each one is color-coded by its data layer: bronze for raw, silver for cleaned, gold for curated.</p>
+<div class="tabs" role="tablist" aria-label="Projects">
+<button class="tab" role="tab" data-c="b" id="t0" aria-controls="p0" aria-selected="true">AWS + Databricks</button>
+<button class="tab" role="tab" data-c="s" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1">Azure Lakehouse</button>
+<button class="tab" role="tab" data-c="g" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Snowflake + dbt</button>
+</div>
+
+<div class="panel" data-c="b" role="tabpanel" id="p0" aria-labelledby="t0">
+<h3>Cloud data engineering pipeline</h3>
+<p class="meta">Banking data</p>
+<p>A pipeline that ingests transaction and customer data into AWS, processes it with Databricks and PySpark, and publishes curated datasets for analytics.</p>
+<ul>
+<li>Designed raw, processed and curated zones to ingest customer, account and transaction files into Amazon S3.</li>
+<li>Cleaned, standardized and transformed data with PySpark and Spark SQL in Databricks notebooks.</li>
+<li>Added checks for nulls, duplicates, invalid records and schema consistency before loading curated data.</li>
+<li>Built partitioned Delta datasets with optimized transformations for downstream use.</li>
+<li>Used the AWS Glue Data Catalog for metadata discovery and applied IAM access-control concepts.</li>
+<li>Kept reusable SQL and PySpark code in GitHub, with Airflow scheduling concepts.</li>
+</ul>
+<ul class="chips"><li>AWS S3</li><li>Glue</li><li>IAM</li><li>EC2</li><li>Databricks</li><li>PySpark</li><li>Delta Lake</li><li>Airflow</li></ul>
+</div>
+
+<div class="panel" data-c="s" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+<h3>Data lakehouse on Azure</h3>
+<p class="meta">Insurance data</p>
+<p>An analytics pipeline that ingests policy, customer and claims data, transforms it in Azure Databricks, and produces business-ready datasets for reporting.</p>
+<ul>
+<li>Built Azure Data Factory workflows to move source data into Azure Data Lake Storage Gen2.</li>
+<li>Wrote Databricks notebooks in PySpark and Spark SQL to cleanse and standardize the datasets.</li>
+<li>Organized data into bronze, silver and gold layers to separate raw, cleansed and business-ready data.</li>
+<li>Handled duplicates, missing values, data types and business-rule validations.</li>
+<li>Created Delta tables with incremental processing to avoid reprocessing unchanged data.</li>
+<li>Tracked tasks with Agile and Scrum practices and used GitHub for source control.</li>
+</ul>
+<ul class="chips"><li>Azure Data Factory</li><li>ADLS Gen2</li><li>Azure Databricks</li><li>PySpark</li><li>Delta Lake</li><li>Git</li></ul>
+</div>
+
+<div class="panel" data-c="g" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+<h3>Sales analytics platform</h3>
+<p class="meta">E-commerce data</p>
+<p>An ELT platform for sales data that uses Snowflake as the warehouse and dbt for SQL and Jinja transformations, testing and modeling.</p>
+<ul>
+<li>Loaded raw sales, customer, product and order data into Snowflake staging tables.</li>
+<li>Developed dbt staging, intermediate and mart models in SQL and Jinja.</li>
+<li>Built fact and dimension models for sales, customer and product analytics.</li>
+<li>Added dbt tests for uniqueness, not-null values and relationships.</li>
+<li>Wrote reusable macros and incremental models for growing datasets.</li>
+<li>Built views for revenue, orders, average order value and product performance.</li>
+</ul>
+<ul class="chips"><li>Snowflake</li><li>dbt</li><li>SQL</li><li>Jinja</li><li>AWS S3</li><li>Dimensional modeling</li></ul>
+</div>
+</section>
+
+<section id="education"><h2>Education and training</h2>
+<div class="edu">
+<div><h3>B.E. in Computer Science and Engineering</h3><p>VTU, 2026</p></div>
+<div><h3>Salesforce internship</h3><p>90 days covering administration, Apex, Lightning Web Components and automation.</p></div>
+</div></section>
+
+<footer id="contact"><h2>Contact</h2>
+<p>Bengaluru, India</p>
+<p><a href="mailto:Furqaanahmed66@gmail.com">Furqaanahmed66@gmail.com</a></p>
+<p><a href="tel:+919538638440">9538638440</a></p>
+</footer>
+</div>
+<script>
+(function(){
+var tabs=[].slice.call(document.querySelectorAll('.tab'));
+function show(i){tabs.forEach(function(t,j){var on=i===j;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById('p'+j).hidden=!on;});}
+tabs.forEach(function(t,i){
+t.addEventListener('click',function(){show(i);});
+t.addEventListener('keydown',function(e){
+var n=e.key==='ArrowRight'?(i+1)%3:e.key==='ArrowLeft'?(i+2)%3:-1;
+if(n>-1){show(n);tabs[n].focus();e.preventDefault();}
+});
+});
+})();
+</script>
+</body>
+</html>
